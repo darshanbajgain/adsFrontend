@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Accident Detection System</title>
+</head>
+
+<body>
+
+    <!-----------header section --------------------------------------------------------------------------------------------------------------------------------------->
+
+    <header id="home" class="text-gray-800 body-font bg-white">
+
+        <!-----------navbar------------------------------------------------------------------------------------------------------------------------------------------------>
+        <nav class="sticky top-0 bg-white mx-auto z-50 py-4 max-w-screen uppercase">
+
+            <!-- Main nav-->
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between ">
+
+                    <!-- Website Logo -->
+                    <div>
+                        <a href="#home" class="flex items-center py-4 px-2 mx-1">
+                            <span
+                                class="font-semibold uppercase tracking-wide text-indigo-700 hover:text-gray-800 md:text-xl xs:text-lg">
+                                Accident Detection System
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Navbar items -->
+                    <div class="flex justify-between items-center space-x-24">
+                        <div class="hidden md:flex items-center space-x-8">
+                            <a href="#detect" class="flex flex-col items-center text-white py-2 px-4 bg-gray-950 border-gray-950 
+                                    hover:text-gray-950 hover:border-2 hover:bg-white ">
+                                <span class="font-semibold">Try Demo</span>
+                            </a>
+                            <a href="#home" class="flex flex-col items-center text-indigo-700 hover:text-gray-600">
+                                <span class="font-semibold">Home</span>
+                            </a>
+                            <a href="#about" class="flex flex-col items-center text-indigo-700 hover:text-gray-600">
+                                <span class="font-semibold">About</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button title="menu" class="outline-none mobile-menu-button">
+                            <svg class="w-6 h-6 text-gray-950 hover:text-gray-600" x-show="!showMenu" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="hidden mobile-menu">
+                <ul class="p-4">
+                    <li>
+                        <a href="#home" class="flex flex-col items-center text-sm px-2 py-4 text-indigo-700 hover:text-gray-600 font-semibold 
+                                transition duration-300">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="flex flex-col items-center text-sm px-2 py-4 text-indigo-700 hover:text-gray-600 font-semibold 
+                                transition duration-300">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detect" class="flex flex-col items-center text-white ">
+                            <span class="font-semibold  bg-gray-950 border-gray-950  py-2 px-4 
+                            hover:text-gray-950 hover:border-2 hover:bg-white">Try Demo</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!------------------------------------------------ Hero container ---------------------------------------------------------->
+
+        <div class="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center my-6 py-4">
+            <div class="lg:flex-grow mt-5 md:mt-0 md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start 
+                    md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="text-2xl font-extrabold leading-9 tracking-tight mt-4 mb-3 sm:text-4xl sm:leading-10 
+                    md:text-5xl md:leading-normal">
+                    Accident Detection System <span class="text-indigo-600">(ADS)</span>
+                </h1>
+                <p class="mb-8 md:pl-0 pl-2 pr-2 leading-relaxed text-gray-800">
+                    An innovative system designed to detect accidents in real-time. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Sed eget eleifend libero.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <a href="#detect" class="bg-gray-950 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 
+                         text-lg mb-4 md:mb-0 md:mr-4">Detect
+                        Accident</a>
+                    <a href="#about" class="inline-flex bg-white border-2 border-indigo-700 py-2 px-6 focus:outline-none
+                         hover:bg-gray-300 text-lg text-indigo-700">About ADS</a>
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
+                <img class="object-cover object-center rounded" alt="crash"
+                    src="https://www.svgrepo.com/show/308202/car-crash-car-accident-traffic-accident-traffic-collision.svg">
+            </div>
+        </div>
+
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------------
+        <div class="md:w-1/2 w-full mx-auto">
+                <h2 class="text-3xl text-center font-semibold my-8 py-2">Detect <span
+                        class="text-indigo-700">Accident</span></h2>
+                <p class="text-lg text-center font-semibold py-2 my-1">Upload recorded footage to detect accidents.</p>
+                <div class="flex items-center justify-center w-full">
+                    <label for="video-upload" class="flex flex-col items-center justify-center w-full h-64 border-2 border-indigo-400 border-solid 
+                        rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg class="w-12 h-12 mb-4 text-indigo-700" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                            </svg>
+                            <p class="mb-2 text-sm text-indigo-700"><span class="font-semibold">Click to upload</span>
+                            </p>
+                            <p class="text-xs text-gray-700">Video files (MAX. 100MB)</p>
+                        </div>
+                        <input id="video-upload" type="file" accept="video/*" class="hidden" />
+                    </label>
+                </div>
+               
+        </div>
+        -------------------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------Detect Accident / Upload Video form ------------------------------------------------------------------------------------------>
+
+    <section id="detect" class="text-gray-800 body-font bg-white my-6 p-4">
+        <div class="container mx-auto mt-4 flex md:flex-row flex-col items-center">
+            <div class="md:w-1/2 w-full mx-auto">
+                <h2 class="text-3xl text-center font-semibold my-8 py-2">Detect <span class="text-indigo-700">Accident</span></h2>
+                <p class="text-lg text-center font-semibold py-2 my-1">Upload recorded footage to detect accidents.</p>
+                <div class="flex items-center justify-center w-full">
+                    <form id="video-form" class="w-full">
+                        <label for="video-upload" class="flex flex-col items-center justify-center w-full h-64 border-2 border-indigo-400 border-solid 
+                            rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                <svg class="w-12 h-12 mb-4 text-indigo-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                        d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                </svg>
+                                <p class="mb-2 text-sm text-indigo-700"><span class="font-semibold">Click to upload</span></p>
+                                <p class="text-xs text-gray-700">Video files (MAX. 100MB)</p>
+                                <span id="video-filename" class="text-xs text-gray-500"></span>
+                            </div>
+                            <input id="video-upload" type="file" accept="video/*" class="hidden" />
+                        </label>
+                        <div class="flex justify-center mt-4">
+                            <button id="play-and-analyze" type="submit" class="bg-gray-950 text-white border-0 py-2 px-6 
+                            focus:outline-none hover:bg-gray-700 text-lg">Play and Analyze</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-------------------------------------------------- About Section -------------------------------------------------------------------->
+
+    <section class="text-gray-800 body-font bg-white my-6 p-4 mx-4 flex items-center">
+        <div class="container mx-auto mt-4 flex md:flex-row flex-col items-center">
+
+            <div class="sm:flex items-center ">
+
+                <div class="sm:w-1/2 p-5">
+                    <div id="about" class="text">
+                        <span class="text-gray-900 border-b-2 border-indigo-600 uppercase">About ADS</span>
+                        <h2 class="my-4 font-bold text-3xl sm:text-4xl ">Our Project <span
+                                class="text-indigo-600">Accident Detection System</span>
+                        </h2>
+                        <p class="text-gray-800">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
+                            doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat
+                            tempore
+                            voluptatum.
+                        </p>
+                    </div>
+                </div>
+                <div class="sm:w-1/2 p-10">
+                    <div class="image object-center text-center min-w-60">
+                        <img alt="Accident" src="./img/acdt2.svg">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-------------------------------------------------Footer---------------------------------------------------------------->
+
+
+    <footer class="shadow bg-gray-950 mt-4 py-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-100">Accident
+                        Detection System</span>
+                </div>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0">
+                    <li>
+                        <a href="#home" class="hover:underline me-4 md:me-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#detect" class="hover:underline me-4 md:me-6">Detect Accident</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-100 sm:text-center">© 2023 <a href="#home"
+                    class="hover:underline">Accident Detection System </a> </span>
+            <span class="block m-2 text-sm text-gray-400 sm:text-center ">Developed By:</span>
+            <span class="block m-2 text-sm text-gray-100 sm:text-center">Aju Tamang and Darshan
+                Bajgain (Batch - 2076)</span>
+        </div>
+    </footer>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------------>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/uploadVideo.js"></script>
+
+</body>
+
+</html>
