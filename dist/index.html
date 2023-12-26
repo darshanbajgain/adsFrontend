@@ -149,10 +149,10 @@
         <div class="container mx-auto mt-4 flex md:flex-row flex-col items-center">
             <div class="md:w-1/2 w-full mx-auto">
                 <h2 class="text-3xl text-center font-semibold my-8 py-2">Detect <span class="text-indigo-700">Accident</span></h2>
-                <p class="text-lg text-center font-semibold py-2 my-1">Upload recorded footage to detect accidents.</p>
+                <p class="text-lg text-center font-semibold py-2 my-1">Upload Image to detect accidents.</p>
                 <div class="flex items-center justify-center w-full">
-                    <form id="video-form" class="w-full">
-                        <label for="video-upload" class="flex flex-col items-center justify-center w-full h-64 border-2 border-indigo-400 border-solid 
+                    <form id="image-form" class="w-full">
+                        <label for="image-upload" class="flex flex-col items-center justify-center w-full h-64 border-2 border-indigo-400 border-solid 
                             rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
                             <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                 <svg class="w-12 h-12 mb-4 text-indigo-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
@@ -160,14 +160,14 @@
                                         d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
                                 </svg>
                                 <p class="mb-2 text-sm text-indigo-700"><span class="font-semibold">Click to upload</span></p>
-                                <p class="text-xs text-gray-700">Video files (MAX. 100MB)</p>
-                                <span id="video-filename" class="text-xs text-gray-500"></span>
+                                <p class="text-xs text-gray-700">Image file</p>
+                                <span id="image-filename" class="text-xs text-gray-500"></span>
                             </div>
-                            <input id="video-upload" type="file" accept="video/*" class="hidden" />
+                            <input id="image-upload" type="file" accept="image/*" class="hidden" />
                         </label>
                         <div class="flex justify-center mt-4">
-                            <button id="play-and-analyze" type="submit" class="bg-gray-950 text-white border-0 py-2 px-6 
-                            focus:outline-none hover:bg-gray-700 text-lg">Play and Analyze</button>
+                            <button id="predict" type="submit" class="bg-gray-950 text-white border-0 py-2 px-6 
+                            focus:outline-none hover:bg-gray-700 text-lg">Predict</button>
                         </div>
                     </form>
                 </div>
@@ -243,7 +243,7 @@
     <!------------------------------------------------------------------------------------------------------------------------------------>
 
     <script src="js/navbar.js"></script>
-    <script src="js/uploadVideo.js"></script>
+    <script src="js/upload-image.js"></script>
 
 </body>
 
