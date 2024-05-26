@@ -1,4 +1,4 @@
-# Accident Detection System - Frontend
+# Accidented Car Detection System - Frontend
 
 ## Made with HTML, Tailwind CSS, and Vanila JS
 
